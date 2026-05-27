@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Weekly Habit Tracker</p>
+        <h1>Keep the week visible.</h1>
+        <p class="intro">Add a few daily habits, tick them off, and let the streaks grow quietly.</p>
+      </div>
+      <div class="week-card" aria-live="polite">
+        <span id="weekLabel">This week</span>
+      </div>
+    </section>
+
+    <section class="panel add-panel" aria-label="Add a new habit">
+      <form id="habitForm" class="habit-form">
+        <label for="habitInput" class="sr-only">Habit name</label>
+        <input id="habitInput" type="text" maxlength="40" placeholder="Read 30 min, Exercise, Drink water..." autocomplete="off" />
+        <button type="submit">Add habit</button>
+      </form>
+    </section>
+
+    <section class="toolbar" aria-label="Week navigation">
+      <button id="prevWeek" type="button">← Previous week</button>
+      <button id="todayWeek" type="button">Back to this week</button>
+      <button id="nextWeek" type="button">Next week →</button>
+    </section>
+
+    <section id="emptyState" class="panel empty-state hidden">
+      <h2>No habits yet</h2>
+      <p>Start with one small habit. The grid will appear here once you add it.</p>
+    </section>
+
+    <section id="trackerPanel" class="panel tracker-panel hidden" aria-label="Habit grid">
+      <div id="grid" class="habit-grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
