@@ -4,7 +4,6 @@ A simple weekly habit tracker built with HTML, CSS, and JavaScript.
 
 The app lets users add daily habits, mark progress on a weekly grid, move between weeks, and keep their data saved after refreshing the page.
 
-Live demo: https://YOUR_USERNAME.github.io/habit-tracker-assessment/
 
 ## Run locally
 
